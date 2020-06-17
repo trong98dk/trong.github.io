@@ -1,0 +1,43 @@
+
+.tong
+{
+    margin: 40px;
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /*khổ giấy A4*/
+}
+.tieude
+{
+    text-align: center;
+}
+#mau1
+{
+    text-align: center;
+}
+.mau1
+{
+    text-align: justify;
+}
+.kyten
+{
+    text-align: right;
+    margin-top: 200px;
+}
+.p1
+{
+    margin: 30px;
+}
+.p2
+{
+    margin: 90px;
+    margin-top: 0px;
+}
+h1
+{
+    color: red;
+}
