@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techmaster</title>
+    <link rel="stylesheet" type="text/css" href="tieude.css">
+</head>
+
+<body>
+    <div class="container-fluid" id="header">
+
+        <header>
+            <style type="text/css">
+                .navbar {
+                    border: none !important;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    justify-content: space-between !important
+                }
+
+                .logo-brand img {
+                    width: 120px
+                }
+
+                .parent-menu.desktop {
+                    height: 100%;
+                    flex: initial
+                }
+
+                .parent-menu.desktop .list-menu {
+                    margin-bottom: 0 !important;
+                    list-style-type: none;
+                    display: flex;
+                    align-items: center
+                }
+
+                .desktop.parent-menu .parent-menu-item {
+                    color: #fff;
+                    margin: 0 10px 0 10px;
+                    text-transform: uppercase;
+                    position: relative;
+                    min-height: 60px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    font-size: 1.1rem
+                }
+
+                .nav-indicator {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 5px;
+                    background-color: #fff
+                }
+
+                .nav-padding {
+                    padding: 0 3px
+                }
+
+                .desktop.parent-menu li:last-child {
+                    margin-right: 0
+                }
+
+                .shopping-cart-top-menu {
+                    font-size: 1.4rem !important;
+                    padding-right: 1rem;
+                    cursor: pointer
+                }
+
+                .user-top-menu {
+                    padding-left: 1rem;
+                    font-size: 1.4rem !important;
+                    cursor: pointer
+                }
+
+                .parent-menu a {
+                    color: #fff
+                }
+
+                .desktop.parent-menu li:hover>a {
+                    text-decoration: none;
+                    color: #c4c4c4
+                }
+
+                .parent-menu .dropdown-menu a {
+                    color: #464646;
+                    text-decoration: none;
+                }
+
+                .parent-menu .dropdown-menu li:hover a {
+                    color: #fff
+                }
+
+                .navbar-toggler {
+                    outline: 0 !important
+                }
+
+                .count-cart-item {
+                    position: absolute;
+                    top: -10px;
+                    left: 20px;
+                    background-color: #26a69a
+                }
+
+                .dropdown-menu.active {
+                    display: flex
+                }
+
+                .track-menu.active {
+                    display: flex
+                }
+
+                .modal-dialog {
+                    margin-top: 5%
+                }
+
+                #advisory-modal .modal-banner {
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    background-color: #1cb2ed;
+                    position: relative;
+                }
+
+                #advisory-modal .modal-banner .close {
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    border: 1px solid #000;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 20px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                #advisory-modal .modal-header {
+                    padding: 1rem 1.5rem;
+                    border-bottom: none;
+                }
+
+                #advisory-modal h5 {
+                    margin-top: 0 !important;
+                }
+
+                #advisory-modal .modal__main-title {
+                    font-size: 24px !important;
+                }
+
+                #advisory-modal .modal__sub-title {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    display: block;
+                    margin: .5rem 0;
+                }
+
+                #advisory-modal .modal-body {
+                    padding: 1rem 1.5rem;
+                    padding-top: 0;
+                }
+
+                #advisory-modal .modal-body input {
+                    width: 100%;
+                    border: 1px solid #ccc;
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 1rem;
+                    transition: all .3s ease-out;
+                    color: #464646;
+                }
+
+                #advisory-modal .modal-body textarea {
+                    width: 100%;
+                    min-height: 200px;
+                    border: 1px solid #ccc;
+                    user-select: none;
+                    resize: none;
+                    padding: 1rem;
+                    color: #464646;
+                    transition: all .3s ease-out;
+                }
+
+                #advisory-modal .modal-body input:focus,
+                #advisory-modal .modal-body textarea:focus {
+                    border: 1px solid #34465c;
+                }
+
+                #advisory-modal .advisory__btns {
+                    margin-top: 1rem;
+                }
+
+                #advisory-modal .advisory__btns button {
+                    display: inline-block;
+                    outline: none;
+                    cursor: pointer;
+                    text-decoration: none !important;
+                    position: relative;
+                    z-index: 20;
+                    overflow: hidden;
+                }
+
+                #advisory-modal .advisory__btns .btn {
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    -webkit-border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    -ms-border-radius: 2px;
+                    border-radius: 2px;
+                    -webkit-transition: 0.5s;
+                    -o-transition: 0.5s;
+                    transition: 0.5s;
+                    padding: 8px 25px !important;
+                    box-shadow: none;
+                    border: none;
+                }
+
+                #advisory-modal .advisory__btns button:nth-child(1) {
+                    border: 1px solid #34465c;
+                    color: #34465c;
+                }
+
+                #advisory-modal .advisory__btns button:nth-child(2) {
+                    position: relative;
+                    border: 1px solid #34465c;
+                    background-color: #34465c;
+                    color: #fff;
+                    margin-left: .5rem;
+                }
+
+                #advisory-modal .advisory__btns button:nth-child(2):after {
+                    background: #fff;
+                    content: "";
+                    height: 155px;
+                    left: -75px;
+                    opacity: .2;
+                    position: absolute;
+                    top: -50px;
+                    transform: rotate(35deg);
+                    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+                    width: 50px;
+                    z-index: -10;
+                }
+
+                #advisory-modal .advisory__btns button:nth-child(2):hover {
+                    color: #fff;
+                }
+
+                #advisory-modal .advisory__btns button:nth-child(2):hover:after {
+                    left: 120%;
+                    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+                }
+
+                ::placeholder {
+                    font-size: 14px;
+                }
+
+                .input__row {
+                    position: relative;
+                    margin-bottom: 10px;
+                }
+
+                .input__row.success input {
+                    border-color: #2ecc71;
+                }
+
+                .input__row.error input {
+                    border-color: #e74c3c;
+                }
+
+                .input__row i {
+                    visibility: hidden;
+                    position: absolute;
+                    top: 13px;
+                    right: 10px;
+                }
+
+                .input__row.success i.fa-check-circle {
+                    color: #2ecc71;
+                    visibility: visible;
+                }
+
+                .input__row.error i.fa-exclamation-circle {
+                    color: #e74c3c;
+                    visibility: visible;
+                }
+
+                .input__row small {
+                    color: #e74c3c;
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    visibility: hidden;
+                }
+
+                .input__row.error small {
+                    visibility: visible;
+                }
+
+                #forgot-password .modal-content,
+                #sign-in-div,
+                #sign-up-div {
+                    padding: 3rem
+                }
+
+                #modal-signin .nav-tabs .nav-link {
+                    border-top-left-radius: 2px;
+                    border-top-right-radius: 2px;
+                    text-align: center;
+                    color: #464646;
+                    background-color: #1e3c740f;
+                    padding: 1rem
+                }
+
+                #modal-signin .nav-tabs .nav-link.active {
+                    background-color: #fff
+                }
+
+                .modal-login-item {
+                    margin-bottom: 2rem
+                }
+
+                .modal-login-item input {
+                    border: none;
+                    border-bottom: 1px solid #9e9e9e;
+                    width: 100%
+                }
+
+                .modal-login-item-half {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 5px
+                }
+
+                .btn-login-modal {
+                    letter-spacing: .5px;
+                    border-radius: 4px;
+                    padding: .5rem 1rem;
+                    width: 100%;
+                    text-transform: uppercase
+                }
+
+                #overlay {
+                    position: fixed;
+                    background-color: #000;
+                    opacity: .7;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 998;
+                    display: none;
+                    transition: 1s;
+                    transition-timing-function: ease
+                }
+
+                .mobile {
+                    display: none
+                }
+
+                #forgot-password {
+                    display: none
+                }
+
+                .checkbox-remember-me {
+                    display: block;
+                    position: relative;
+                    padding-left: 25px;
+                    margin-bottom: 12px
+                }
+
+                .checkbox-remember-me input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0
+                }
+
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 20px;
+                    width: 20px;
+                    background-color: #1e3c741f
+                }
+
+                .checkbox-remember-me input:checked~.checkmark {
+                    background-color: #3c78e8
+                }
+
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none
+                }
+
+                .checkbox-remember-me input:checked~.checkmark:after {
+                    display: block
+                }
+
+                .checkbox-remember-me .checkmark:after {
+                    left: 8px;
+                    top: 4px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid #fff;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg)
+                }
+
+                #sign-in-div .fab {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    color: #fff;
+                    overflow: hidden;
+                    margin: 0 10px 0 10px
+                }
+
+                #sign-in-div .fab img {
+                    height: 100%;
+                    width: 40px
+                }
+
+                .user-dropdown-avatar {
+                    overflow: hidden;
+                    padding-left: 1rem;
+                    cursor: pointer;
+                    width: 3rem;
+                    height: 2rem
+                }
+
+                .user-dropdown-avatar img {
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%
+                }
+
+                .dropdown-menu {
+                    top: 100%;
+                    position: absolute;
+                    left: auto;
+                    right: 0;
+                    display: none;
+                    flex-flow: column;
+                    width: 200px;
+                    padding: 0;
+                    box-shadow: rgba(0, 0, 0, .15) 0 0 10px;
+                    border: none;
+                    margin-top: .25rem
+                }
+
+                .dropdown-menu a,
+                .track-menu a {
+                    text-decoration: none
+                }
+
+                .dropdown-menu li {
+                    width: 100%;
+                    text-align: center;
+                    color: #464646 !important;
+                    padding: .7rem 1rem;
+                    cursor: pointer;
+                    text-transform: none
+                }
+
+                .dropdown-menu li:hover {
+                    background-color: #c4c4c4;
+                    color: #fff !important
+                }
+
+                .track-menu {
+                    border-radius: 4px;
+                    background-color: #fff;
+                    margin-top: .25rem;
+                    background-clip: padding-box;
+                    list-style: none;
+                    text-align: left;
+                    font-size: 1rem;
+                    float: left;
+                    z-index: 1000;
+                    top: 100%;
+                    width: 500px;
+                    position: absolute;
+                    display: none;
+                    flex-flow: column;
+                    padding: .5rem 0;
+                    box-shadow: rgba(0, 0, 0, .15) 0 0 10px
+                }
+
+                .track-menu li {
+                    width: 100%;
+                    padding: .7rem 1rem;
+                    cursor: pointer;
+                    text-transform: none
+                }
+
+                .track-menu a {
+                    color: #464646 !important
+                }
+
+                .track-menu a:hover {
+                    color: #3c78e8 !important
+                }
+
+                .shopping-cart-mobile {
+                    cursor: pointer;
+                    position: fixed;
+                    height: 45pt;
+                    width: 45pt;
+                    padding: 0;
+                    z-index: 900;
+                    text-align: center;
+                    bottom: 70pt;
+                    right: 18pt;
+                    color: #fff;
+                    border-radius: 50%;
+                    background-color: #26a69a;
+                    box-shadow: 0 3px 12px rgba(0, 0, 0, .15);
+                    -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, .15)
+                }
+
+                .shopping-cart-mobile .fa-shopping-cart {
+                    position: absolute;
+                    top: 14pt;
+                    right: 9pt;
+                    font-size: 30px
+                }
+
+                .count-cart-item-mobile {
+                    position: absolute;
+                    font-size: 1.2rem;
+                    top: -15pt;
+                    right: -2pt;
+                    color: #464646;
+                    background-color: transparent
+                }
+
+                .parent-menu a {
+                    font-size: .95rem !important
+                }
+
+                .fb_customer_chat_bounce_in_v2 {
+                    bottom: 113pt !important
+                }
+
+                @media (max-width:1199px) {
+                    .desktop.parent-menu .parent-menu-item {
+                        margin: 0 5px 0 5px
+                    }
+                }
+
+                @media (max-width:1366px) {
+                    .logo-brand img {
+                        width: 100px
+                    }
+
+                    .desktop.parent-menu .parent-menu-item {
+                        min-height: 54px
+                    }
+
+                    .nav-indicator {
+                        height: 4px
+                    }
+
+                    .parent-menu a {
+                        font-size: .9rem !important
+                    }
+                }
+
+                @media (max-width:991px) {
+                    .navbar {
+                        padding: 15px 10px
+                    }
+
+                    .user-dropdown-avatar {
+                        padding-left: 0;
+                        text-align: center
+                    }
+
+                    .logo-brand {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%)
+                    }
+
+                    .parent-menu.mobile {
+                        font-size: 1rem;
+                        position: fixed;
+                        width: 250px;
+                        height: 100%;
+                        left: -250px;
+                        z-index: 999;
+                        background-color: #fff;
+                        top: 0;
+                        align-items: center;
+                        transition: .4s
+                    }
+
+                    .parent-menu.mobile ul {
+                        padding: 0
+                    }
+
+                    .parent-menu.mobile li {
+                        height: 60px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: 10px 25px
+                    }
+
+                    .parent-menu.mobile a {
+                        color: #464646
+                    }
+
+                    .parent-menu.mobile .active {
+                        background-color: #c4c4c4
+                    }
+
+                    .parent-menu.mobile .active a {
+                        color: #fff
+                    }
+
+                    .parent-menu.mobile a:hover {
+                        text-decoration: none
+                    }
+
+                    .desktop,
+                    .nav-indicator {
+                        display: none
+                    }
+
+                    .mobile {
+                        display: block
+                    }
+                }
+
+                @media (min-width:576px) {
+                    #modal-signin .modal-dialog {
+                        max-width: 400px
+                    }
+                }
+
+                @media (max-width:576px) {
+                    .shopping-cart-mobile {
+                        width: 50px;
+                        height: 50px
+                    }
+
+                    .shopping-cart-mobile .fa-shopping-cart {
+                        position: absolute;
+                        top: 11pt;
+                        right: 7pt;
+                        font-size: 27px
+                    }
+                }
+
+                #advisory-modal input {
+                    border: none;
+                    border-bottom: 1px solid #dee2e6;
+                    width: 100%
+                }
+
+                #advisory-modal input:not(:last-child) {
+                    margin-bottom: 1rem
+                }
+
+                .admin-page,
+                .teacher-page {
+                    display: none
+                }
+
+                .required-info-body {
+                    padding: 1.5rem;
+                    border-radius: 4px;
+                    background-color: #f2f8fd;
+                    text-align: center
+                }
+
+                .required-info-footer {
+                    padding: .5rem 1.5rem;
+                    border-top: 1px solid #dedede
+                }
+
+                .required-info-icon {
+                    color: grey;
+                    margin-bottom: .4rem
+                }
+
+                #required-info-input {
+                    margin-top: 1.5rem
+                }
+            </style>
+            <div class="nav-bar">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="logo-brand">
+                        <a href="/">
+                            <img src="https://techmaster.vn/resources/image/new_logo.png" max-witdh:="120px" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="user-nav mobile">
+
+                        <i class="fas fa-user user-top-menu" data-toggle="modal" data-target="#modal-signin"
+                            style="color: white"></i>
+
+                    </div>
+                    <div class="btn mobile shopping-cart-mobile" style="display:none">
+                        <a href="/gio-hang" style="color: white">
+                            <div style="position: relative; line-height: 75px">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count-cart-item count-cart-item-mobile">0</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="parent-menu desktop">
+                        <ul class="list-menu">
+
+
+                            <li class="parent-menu-item" onclick="GoToSite(this)" data-href="/khoa-hoc/truc-tuyen">
+                                <a href="/khoa-hoc/truc-tuyen" class="nav-padding">
+                                    <span>Trực tuyến</span>
+                                </a>
+
+                            </li>
+
+
+
+                            <li class="parent-menu-item" onclick="GoToSite(this)" data-href="/khoa-hoc/phong-lab">
+                                <a href="/khoa-hoc/phong-lab" class="nav-padding">
+                                    <span>Phòng lab</span>
+                                </a>
+
+                            </li>
+                            <li class="parent-menu-item" onclick="GoToSite(this)" data-href="/san-pham-hoc-vien">
+                                <a href="/san-pham-hoc-vien" class="nav-padding">
+                                    <span>Sản phẩm học viên</span>
+                                </a>
+
+                            </li>
+
+
+
+                            <li class="parent-menu-item" onclick="GoToSite(this)" data-href="/trungtam/lich-khai-giang">
+                                <a href="/trungtam/lich-khai-giang" class="nav-padding">
+                                    <span>Khai giảng</span>
+                                </a>
+
+                            </li>
+
+
+
+                            <li class="parent-menu-item" onclick="GoToSite(this)" data-href="/posts">
+                                <a href="/posts" class="nav-padding">
+                                    <span>Blog</span>
+                                </a>
+
+                            </li>
+
+
+
+                            <li class="parent-menu-item" onclick="GoToSite(this)" data-href="/trai-nghiem">
+                                <a href="/trai-nghiem" class="nav-padding">
+                                    <span>Trải nghiệm</span>
+                                </a>
+
+                            </li>
+
+
+
+                            <li class="parent-menu-item" onclick="GoToSite(this)" data-href="/viec-lam">
+                                <a href="/viec-lam" class="nav-padding">
+                                    <span>Việc làm</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="modal fade" id="forgot-password" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <form class="modal-login-form">
+                                        <div style="padding-top: 1px" class="modal-login-item text-center">
+                                            <h2>Quên mật khẩu</h2>
+                                        </div>
+                                        <div class="modal-login-item">
+                                            <input type="text" placeholder="Email" id="forgot-password-email"
+                                                required="">
+                                        </div>
+                                        <button type="button" class="btn btn-green btn-login-modal"
+                                            id="btn-forgot-password">Gửi
+                                            mail trợ giúp</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="parent-menu mobile" id="mySidenav" style="overflow-y: auto">
+                            <ul>
+                                <li class="parent-menu-item">
+                                    <a href="/">
+                                        <span>Trang chủ</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="parent-menu-item">
+                                    <a href="/khoa-hoc/truc-tuyen">
+                                        <span>Trực tuyến </span>
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="parent-menu-item">
+                                    <a href="/khoa-hoc/phong-lab">
+                                        <span>Phòng lab </span>
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="parent-menu-item" onclick="ShowSubMenu(this)"
+                                    data-dropdown="submenu-dropdown-mobile-2">
+                                    <a>
+                                        <span>Lộ trình <i class="fas fa-caret-down"></i></span>
+                                    </a>
+                                </li>
+
+                                <li class="parent-menu-item" style="height: auto; padding-top: 0; display: none;"
+                                    id="submenu-dropdown-mobile-2" data-name="submenu-dropdown-mobile">
+                                    <div style="padding-left: 1.5rem">
+
+                                        <a href="/lo-trinh">
+                                            <div style="padding-bottom: 1.5rem;">
+                                                <span>Thực tập 9 tháng</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/lo-trinh/foundation">
+                                            <div style="padding-bottom: 1.5rem;">
+                                                <span>Nền tảng lập trình</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/lo-trinh/front-end">
+                                            <div style="padding-bottom: 1.5rem;">
+                                                <span>Front End + React</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/lo-trinh/mobile">
+                                            <div style="padding-bottom: 1.5rem;">
+                                                <span>Di động React Native</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/lo-trinh/java-fullstack">
+                                            <div style="padding-bottom: 1.5rem;">
+                                                <span>Java Spring Boot FullStack</span>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </li>
+
+
+
+
+                                <li class="parent-menu-item">
+                                    <a href="/san-pham-hoc-vien">
+                                        <span>Sản phẩm học viên </span>
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="parent-menu-item">
+                                    <a href="/trungtam/lich-khai-giang">
+                                        <span>Khai giảng </span>
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="parent-menu-item">
+                                    <a href="/posts">
+                                        <span>Blog </span>
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="parent-menu-item">
+                                    <a href="/trai-nghiem">
+                                        <span>Trải nghiệm </span>
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="parent-menu-item">
+                                    <a href="/viec-lam">
+                                        <span>Việc làm </span>
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="parent-menu-item" onclick="ShowSubMenu(this)"
+                                    data-dropdown="submenu-dropdown-mobile-8">
+                                    <a>
+                                        <span>Chúng tôi <i class="fas fa-caret-down"></i></span>
+                                    </a>
+                                </li>
+                        </div>
+                    </div>
+            </div>
+                  
+        </header>
+
+    </div>
+</body>
+
+</html>
