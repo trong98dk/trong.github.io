@@ -102,3 +102,16 @@ img {
     justify-content: space-between;
     padding: .5rem 1rem;
 }
+.list-menu {
+    margin-top: 0;
+    text-decoration: none;
+}
+.nav-padding{
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.parent-menu-item{
+    padding-left: 10px;
+    padding-right: 10px;
+}

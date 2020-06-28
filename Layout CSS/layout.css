@@ -1,0 +1,88 @@
+/* hình 1 */
+.red1{
+    background-color: red;
+   width: 55%;
+   height: 400px;
+   float: left;
+}
+.green1{
+    background-color: green;
+   width: 45%;
+   height: 200px;
+   float: left;
+}
+.blue1{
+    background-color: blue;
+    width: 45%;
+    height: 200px;
+    float: left;   
+}
+body{
+    margin: 0px;
+}
+/* hình 2 */
+
+
+.red2{
+    background-color: red;
+   width: 60%;
+   height: 400px;
+   float: left;
+   margin-right: 15px;
+}
+.green2{
+    background-color: green;
+   width: 38.9%;
+   height: 200px;
+   float: right;
+}
+.blue2{
+    background-color: blue;
+    width: 38.9%;
+    height: 200px;
+    float: right;   
+}
+body{
+    margin: 0px;
+}
+
+/* hình 3 */
+.red3{
+    background-color: red;
+   width: 33.3%;
+   height: 400px;
+   float: left;
+}
+.green3{
+    background-color: green;
+   width: 33.33%;
+   height: 400px;
+   float: left;
+}
+.blue3{
+    background-color: blue;
+    width: 33.33%;
+    height: 400px;
+    float: left;   
+}
+/* hình 4 */
+.red4{
+    background-color: red;
+   width: 32.6%;
+   height: 400px;
+   float: left;
+}
+.green4{
+    background-color: green;
+   width: 32.6%;
+   height: 400px;
+   float: left;
+   margin-left: 15px;
+   margin-right: 15px;
+}
+.blue4{
+    background-color: blue;
+    width: 32.6%;
+    height: 400px;
+    float: left;   
+}
