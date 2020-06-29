@@ -35,6 +35,7 @@ div.gallery {
   .center
   {
       margin-right: 200px;
+      max-width: 1000px;
   }
   /*-----------------------------------------------*/
   h1 {
