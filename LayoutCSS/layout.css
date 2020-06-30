@@ -29,7 +29,7 @@ body{
 
 .red2{
     background-color: red;
-   width: 50%;
+   width: 55%;
    height: 400px;
    float: left;
    border-right: 7.5px solid white;
@@ -38,14 +38,14 @@ body{
 }
 .green2{
     background-color: green;
-   width: 50%;
+   width: 45%;
    height: 200px;
    float: right;
     border-left: 7.5px solid white;
 }
 .blue2{
     background-color: blue;
-    width: 50%;
+    width: 45%;
     height: 200px;
     float: right;
     border-left: 7.5px solid white;
