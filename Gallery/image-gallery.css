@@ -25,6 +25,7 @@ div.gallery {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    text-align: center;
   }
 
   .topnav a:hover {
@@ -39,8 +40,8 @@ div.gallery {
     
   }
   /*-----------------------------------------------*/
-  h1 {
-      color: darkorange;
+  .tieude {
+      color: darkorchid;
       text-align: center;
   }
   .nhom1 {
@@ -59,4 +60,7 @@ div.gallery {
     display: flex;
     justify-content: center;
   }
-  
+  .topnav {
+    display: flex;
+    justify-content: center;
+  }
