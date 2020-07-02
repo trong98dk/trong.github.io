@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    
+}
+.topnav {
+    text-align: center;
+   
+    background-color: #ff9999;
+    display: flex;
+    justify-content: space-around;
+
+    
+}
+.dong1 {
+    display: flex;
+    justify-content:center;
+    justify-content: space-around;
+    
+}
+.dong2 {
+    display: flex;
+    justify-content:center;
+    justify-content: space-around;
+}
+.dong3 {
+    display: flex;
+    justify-content:center;
+    justify-content: space-around;
+}
+body {
+    font-family: sans-serif;
+    color: brown;
+}
+#menu ul {
+list-style-type: none;
+background:#ff6666;
+text-align: center;
+}
+#menu ul li {
+    color: snow;  
+}
+#menu ul li a {
+    
+    text-decoration: none;
+}
+#menu ul li > .sub-menu {
+    display: none;
+}
+/*==Reset CSS==*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+   
+  /*==Style cơ bản cho website==*/
+/*==Style cho menu===*/
+#menu li {
+    color: #f1f1f1;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -5px;
+    position: relative;
+  }
+#menu ul li:hover .sub-menu {
+    display: block;
+}
+
+  #menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  #menu a:hover {
+    background: #F1F1F1;
+    color: #333;
+  }
+  .sub-menu {
+    display: none;
+    position: absolute;
+   }
+   .sub-menu li {
+    margin-left: 0 !important;
+   }
+
+/* back to top */
+.cd-top {
+    display: inline-block;
+    position: fixed;
+
+    bottom: 15px;
+    right: 30px;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #f34a4a;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .cd-top:hover {
+    background-color: #ff1e1e;
+  }
