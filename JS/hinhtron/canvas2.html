@@ -1,17 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<Canvas id = "canvas"></Canvas>
+    <script>
+         var canvas = document.getElementById('canvas')
+        console.log(canvas)
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+        canvas.width = 800
+        canvas.height = 700
+        canvas.style.border = '1px solid black'
 
 
-<body>
+        console.log(canvas)
 
-    <canvas id="canvas"></canvas>
-    <script src="./canvas2.js"></script>
-</body>
 
-</html>
+        var ctx = canvas.getContext('2d')
+
+    class Circle {
+        constructor(dx,dy,dr,color) {
+        this.dx=dx
+        this.dy=dy
+        this.dr=dr
+        this.color=color
+    }
+    draw() {
+        ctx.beginPath()
+        ctx.fillStyle = this.color
+        ctx.arc(this.dx,this.dy,this.dr,0,2*Math.PI,false)
+        ctx.fill()
+        ctx.stroke()
+    }
+}
+    var circle = new Circle (400,350,200,'#fff')
+    circle.draw()
+    
+    var circle = new Circle (300,250,10,'#fff')
+    circle.draw()
+    
+    var circle = new Circle (500,250,10,'#fff')
+    circle.draw()
+
+    ctx.beginPath()
+        ctx.fillStyle = '#fff'
+        ctx.strokeStyle = 'black'
+        ctx.arc(400,350,150,0, Math.PI,false)
+        ctx.fill()
+        ctx.stroke() 
+        ctx.closePath()
+
+    
+    </script>
