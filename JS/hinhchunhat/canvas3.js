@@ -27,13 +27,13 @@ class Rect {
 var rect = new Rect(0,0,200,50,'red')
 rect.draw()
 
-var rect1 = new Rect(200,220,600,200,'violet')
+var rect1 = new Rect(400,0,600,200,'violet')
 rect1.draw()
 
-var rect2 = new Rect(100,450,300,100,'yellow')
+var rect2 = new Rect(0,900,300,100,'yellow')
 rect2.draw()
 
-var rect3 = new Rect(50,650,250,100,'blue')
+var rect3 = new Rect(900,800,400,200,'blue')
 rect3.draw()
 
 // class Rect {
