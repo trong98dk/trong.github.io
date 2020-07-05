@@ -1,0 +1,47 @@
+
+#page {
+    width: 27cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+p {
+    font-size: smaller
+}
+blockquote {
+    text-align: center;
+}
+aside {
+    max-width: 300px;
+    max-height: 500px;
+    float: right;
+    margin: 15px;
+}
+footer {
+   
+    text-align: center;
+    font-size: 16px;
+
+}
+#content {
+    max-width: 800px;
+    margin: 15px;
+}
+.noidung {
+    display: flex;
+    align-items:flex-start;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    
+}
+a:hover {
+    color: darkgoldenrod;
+}
