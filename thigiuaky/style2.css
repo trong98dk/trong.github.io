@@ -1,0 +1,49 @@
+div.gallery {
+    margin: 70px;
+    border: 1px solid #ccc;
+   
+  }
+
+  div.desc {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /*-----------------------------------------------*/
+  .tieude {
+      color: darkorchid;
+      text-align: center;
+  }
+  
+  .nhom2 {
+    display: flex;
+    justify-content: center;
+  }
+  .nhom3 {
+    display: flex;
+    justify-content: center;
+  }
+ img {
+     width: 500px;
+     
+ }
+ .center {
+    width: 21cm;
+    min-height: 27cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+ }
+
+ .anh {
+     text-align: center;
+ }
+ .back {
+     background-color: aquamarine;
+     width: 100px;
+     text-align: center;
+     font-size: 40;
+ }
