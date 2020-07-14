@@ -21,6 +21,7 @@
     display: block;
     display: flex;
     align-items: center;
+    color: #757575;
 }
 #main-menu ul li:hover {
     background: #e1eaea;
@@ -52,7 +53,7 @@
     display: block;
 }
 #main-menu a {
-    color: #757575;
+   
     font-size: 13px;
 }
 nav.main-menu ul li {
