@@ -109,3 +109,6 @@ ul {
 .ten {
     padding-bottom: 6px;
 }
+#main-menu ul li a:hover {
+    color: orange;
+}
