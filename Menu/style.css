@@ -55,3 +55,56 @@
     color: #757575;
     font-size: 13px;
 }
+nav.main-menu ul li {
+    display: inline-block;
+    padding-right: 25px;
+    position: relative;
+}
+nav.main-menu ul li a {
+    color: #32323d;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 3px;
+}
+a {
+    text-decoration: none;
+}
+nav.main-menu ul li:hover > a {
+color: #9877ff;
+}
+
+#khung .column ul li {
+    
+    display: flex;
+    flex-direction: column
+    
+}
+.column {
+    float: left;
+}
+nav.main-menu #khung {
+    position: absolute;
+    top: 16;
+    left: 0;
+    width: 350px;
+    height: 180px;
+    display: none;
+}
+nav.main-menu ul li:hover #khung {
+    display: block;
+}
+body {
+    font-family: Roboto,sans-serif;
+}
+ul {
+    padding-left: 0px;  
+}
+#khung {
+
+    border: solid #f2f2f2;
+    padding-left: 20px;
+    
+}
+.ten {
+    padding-bottom: 6px;
+}
