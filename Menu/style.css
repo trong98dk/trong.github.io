@@ -2,22 +2,25 @@
     box-sizing: border-box;
 }
 #main-menu ul {
-    background: #f2f2f2 ;
     width: 250px;
-    padding: 0;
     list-style-type: none;
-    border: solid slategray 1px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
+    color: #757575;
 }
 #main-menu ul li {
     width: 250px;
-    height: 40px;
+    height: 20px;
     position: relative;
+
 }
 #main-menu ul li a {
     text-decoration: none;
     display: block;
+    display: flex;
+    align-items: center;
 }
 #main-menu ul li:hover {
     background: #e1eaea;
@@ -27,7 +30,7 @@
     position: absolute;
     left: 249px;
     top: 0px;
-    height: 481px;
+    height: 241px;
     border: 0px;
   
     display: none;
@@ -39,11 +42,16 @@
 #main-menu .sub-menu2 {
     position: absolute;
     left: 250px;
-    border: solid slategray 1px;
-    height: 481px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+    background-color: #fff;
+    height: 160px;
     
     display: none;
 }
 #main-menu ul li .sub-menu li:hover .sub-menu2 {
     display: block;
+}
+#main-menu a {
+    color: #757575;
+    font-size: 13px;
 }
