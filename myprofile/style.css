@@ -44,7 +44,7 @@ div.gallery {
   .center
   {
 
-      max-width: 100%;
+
     
   }
   /*-----------------------------------------------*/
@@ -82,9 +82,6 @@ div.gallery {
  .bohuc ul li {
      display: flex;
      justify-content: center;
- }
- .bohuc img {
-     padding-left: 30%;
  }
 .topnav {
     position: absolute;
